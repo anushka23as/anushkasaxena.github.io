@@ -1,29 +1,33 @@
-/* Remove Docsify theme backgrounds completely */
-body, #app, .markdown-section, .content, .content-wrapper, .sidebar {
-  background: none !important;
+/* Force-remove any Docsify theme backgrounds */
+html, body, #app, .markdown-section, .content, .content-wrapper, .sidebar {
+  background: transparent !important;
   box-shadow: none !important;
 }
 
-/* Black background with dense subtle grid */
+/* Black background with visible dense grid */
 body {
   background-color: #0b0b0b !important;
 
-  /* dense grid using linear gradients */
   background-image:
-    linear-gradient(0deg, rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    linear-gradient(
+      rgba(255,255,255,0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.12) 1px,
+      transparent 1px
+    );
 
-  background-size: 20px 20px; /* grid spacing */
+  background-size: 16px 16px; /* closer grid */
   color: #eaeaea !important;
   margin: 0;
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Make Docsify content fully transparent */
-.markdown-section, #app {
+/* Make Docsify text area transparent */
+.markdown-section {
   background: transparent !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
   padding: 2rem !important;
 }
 
