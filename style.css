@@ -1,18 +1,13 @@
-/* Black background with subtle pastel floral pattern */
+/* Black background with dense white grid */
 body {
   background-color: #0b0b0b; /* black base */
-  
-  /* multiple tiny pastel flowers using radial gradients */
+
+  /* dense grid pattern using linear gradients */
   background-image:
-    radial-gradient(circle at 10% 20%, #ffb3ba 2px, transparent 0),
-    radial-gradient(circle at 30% 50%, #ffdfba 2px, transparent 0),
-    radial-gradient(circle at 60% 10%, #ffffba 2px, transparent 0),
-    radial-gradient(circle at 80% 70%, #baffc9 2px, transparent 0),
-    radial-gradient(circle at 50% 90%, #bae1ff 2px, transparent 0),
-    radial-gradient(circle at 20% 80%, #ffb3ff 2px, transparent 0);
+    linear-gradient(0deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
   
-  /* repeat the pattern across the page */
-  background-size: 200px 200px;
+  background-size: 20px 20px; /* distance between grid lines */
   color: #eaeaea; /* text color */
   margin: 0;
   font-family: sans-serif;
@@ -25,3 +20,4 @@ body {
   border-radius: 0 !important;
   padding: 2rem !important;
 }
+
