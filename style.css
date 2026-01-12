@@ -1,22 +1,27 @@
-/* Remove Docsify default backgrounds */
-#app, .markdown-section, .content, .content-wrapper, .sidebar {
+/* Black background with subtle pastel floral pattern */
+body {
+  background-color: #0b0b0b; /* black base */
+  
+  /* multiple tiny pastel flowers using radial gradients */
+  background-image:
+    radial-gradient(circle at 10% 20%, #ffb3ba 2px, transparent 0),
+    radial-gradient(circle at 30% 50%, #ffdfba 2px, transparent 0),
+    radial-gradient(circle at 60% 10%, #ffffba 2px, transparent 0),
+    radial-gradient(circle at 80% 70%, #baffc9 2px, transparent 0),
+    radial-gradient(circle at 50% 90%, #bae1ff 2px, transparent 0),
+    radial-gradient(circle at 20% 80%, #ffb3ff 2px, transparent 0);
+  
+  /* repeat the pattern across the page */
+  background-size: 200px 200px;
+  color: #eaeaea; /* text color */
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Remove any background from Docsify content boxes */
+.markdown-section, #app {
   background: transparent !important;
   box-shadow: none !important;
-}
-
-/* Body with black + dots */
-body {
-  background-color: #0b0b0b !important;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px) !important;
-  background-size: 40px 40px !important;
-  color: #eaeaea !important; /* text color */
-  margin: 0 !important;
-  font-family: sans-serif !important;
-}
-
-/* Optional: remove borders or padding if necessary */
-.markdown-section {
-  background: transparent !important;
-  padding: 2rem !important;
   border-radius: 0 !important;
+  padding: 2rem !important;
 }
