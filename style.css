@@ -1,23 +1,15 @@
-/* Full page black background with dots */
-body {
-  background-color: #0b0b0b;
-  background-image:
-    radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;  /* distance between dots */
-  color: #eaeaea; /* text color */
-  margin: 0;
-  font-family: sans-serif;
+/* Full black background with subtle dots */
+body, #app, .markdown-section {
+  background-color: #0b0b0b !important; /* pure black */
+  background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px) !important;
+  background-size: 40px 40px !important; /* distance between dots */
+  color: #eaeaea !important; /* text color */
 }
 
-/* Remove any background from Docsify content box */
-.markdown-section {
-  background: transparent !important;
-  padding: 2rem;
-  border-radius: 0;
-}
-
-/* Remove shadow or other overlays */
-#app {
+/* Remove any background or box from Docsify containers */
+.markdown-section, #app {
   background: transparent !important;
   box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 2rem !important;
 }
