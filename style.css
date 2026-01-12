@@ -10,6 +10,11 @@ body {
 
 /* Content box styling */
 .markdown-section {
+  background: transparent;
+  padding: 2rem;
+  border-radius: 0;
+}
+
   background: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 12px;
